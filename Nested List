@@ -1,0 +1,22 @@
+if __name__ == '__main__':
+    lst=[]
+    dic={}
+    for _ in range(int(raw_input())):
+        name = raw_input()
+        score = float(raw_input())
+        lst.append(score)
+        dic[name]=score
+
+s=set(lst)
+l=list(s)
+l.sort()
+temp=l[1]
+lst3=[]
+for key,value in dic.items():
+    if value==temp:
+        lst3.append(key)
+lst3.sort()
+
+for i in range(len(lst3)):
+    print(lst3[i])
+
